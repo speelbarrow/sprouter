@@ -1,0 +1,27 @@
+{
+  "name": "@speelbarrow/sprouter",
+  "description": "The last Javascript/TypeScript/JSX/TSX router you'll ever need.",
+  "author": {
+    "name": "Noah Friedman <speelbarrow>",
+    "email": "noahfriedman2@gmail.com",
+    "url": "https://speely.net"
+  },
+  "license": "GPL-3.0-or-later",
+  "version": "0.0.1",
+  "type": "module",
+  "module": "index.ts",
+  "bin": "./main.ts",
+  "readme": "README.md",
+  "files": [
+    "**/*.ts"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "bun": "^1.0.18",
+    "typescript": "^5.0.0"
+  }
+}

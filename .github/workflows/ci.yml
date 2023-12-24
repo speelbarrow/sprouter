@@ -1,0 +1,22 @@
+name: CI
+on:
+  push:
+    paths:
+      - '**.ts'
+      - package.json
+      - bun.lockb
+      - .github/workflows/ci.yml
+    branches: [ '**' ]
+    tags-ignore: [ '**' ]
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout and setup
+        uses: speelbarrow/checkout-and-setup@v1
+        with:
+          force_bun: true
+      - name: Run tests
+        run: bun test

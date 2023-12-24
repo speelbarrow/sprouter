@@ -1,0 +1,23 @@
+name: CI/CD
+on:
+  push:
+    tags: [ 'v*' ]
+
+jobs:
+  CI:
+    uses: ./.github/workflows/ci.yml
+
+  CD:
+    needs: CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout and setup
+        uses: speelbarrow/checkout-and-setup@v1
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - name: Publish to NPM
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
