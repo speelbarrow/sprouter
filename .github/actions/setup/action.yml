@@ -1,7 +1,7 @@
 name: ''
 description: ''
 inputs:
-  force_bun:
+  variables:
     description: ''
     required: false
     default: 'false'
@@ -16,7 +16,7 @@ runs:
         key: node_modules-${{ hashFiles('bun.lockb') }}
         restore-keys: node_modules-
     - name: Set up Bun
-      if: steps.cache.outputs.cache-hit != 'true' || inputs.force_bun == 'true'
+      if: steps.cache.outputs.cache-hit != 'true' || inputs.variables == 'true'
       uses: oven-sh/setup-bun@v1
     - name: Install dependencies
       if: steps.cache.outputs.cache-hit != 'true'

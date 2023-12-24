@@ -17,6 +17,6 @@ jobs:
       - name: Checkout and setup
         uses: speelbarrow/checkout-and-setup@v1
         with:
-          force_bun: true
+          variables: true
       - name: Run tests
         run: bun test
