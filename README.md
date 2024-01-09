@@ -5,11 +5,11 @@ Dead simple and fully configurable. The last `((Java|Type)Script)|(J|T)SX` route
 
 ## Features
 
-*This is a work in progress! Features will be checked off as they are implemented.*
+*This is a work in progress! Not yet ready to be used.*
 
-- [ ] **Dead simple** - Sensible defaults are provided for drop-in installation. 
-- [ ] [**Fully configurable**](#naked_opts) - All configuration options are exposed in some form or another.
-- [ ] TypeScript/JSX support - Thanks to the Bun run-time's TypeScript and JSX support, 
+- **Dead simple** - Sensible defaults are provided for drop-in installation. 
+- [**Fully configurable**](#naked_opts) - All configuration options are exposed in some form or another.
+- TypeScript/JSX support - Thanks to the Bun run-time's TypeScript and JSX support, 
   files can be transpiled on-the-fly by the router itself.
 
 ### `naked_opts`
