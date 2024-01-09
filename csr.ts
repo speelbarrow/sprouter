@@ -1,6 +1,6 @@
 import { watch } from "fs/promises"
 import type { Server, Opts, NakedOpts } from "./server.ts"
-import { FileSystemRouter, Glob, Transpiler } from "bun"
+import { Glob } from "bun"
 import type { WatchOptions } from "fs"
 import type { BuildConfig } from "bun"
 
